@@ -178,11 +178,14 @@
           gap: 1rem;
         }
 
+        /* Trust Badges Mobile Fix */
         .trust-badges {
-          grid-template-columns: 1fr !important;
           margin-top: 0 !important;
+          position: relative !important;
+          z-index: 1 !important;
         }
 
+        .trust-badges,
         .services-grid,
         .why-choose-grid,
         .testimonials-grid {
@@ -352,7 +355,8 @@
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
-      ">
+      "
+      class="trust-badges">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem">
         <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; transition: all 0.3s" class="hover-scale">
           <div style="font-size: 2.5rem; color: #3498db; margin-bottom: 1rem">✓</div>
