@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPM Clean - Professional Cleaning Services in Melbourne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 1s ease-out;
+      }
+      .animate-slide-in {
+        animation: slideIn 1s ease-out;
+      }
+      .animate-pulse {
+        animation: pulse 2s infinite;
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      .hover-scale {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, #3498db, #2980b9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
+      }
+      .gradient-bg {
+        background: linear-gradient(45deg, #3498db, #2980b9);
+        background-size: 200% 200%;
+        animation: gradient 3s ease infinite;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; font-family: 'Lato', sans-serif; color: #333; line-height: 1.6">
+    <!-- Top Bar -->
+    <div style="background: linear-gradient(45deg, #2c3e50, #34495e); color: white; padding: 0.8rem 0; text-align: center; font-size: 0.9rem">
+      <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 2rem">
+        <span style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.1); padding: 0.5rem 1rem; border-radius: 5px">📞 (03) XXXX XXXX</span>
+        <span style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.1); padding: 0.5rem 1rem; border-radius: 5px">✉️ info@gpmclean.com.au</span>
+        <span style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.1); padding: 0.5rem 1rem; border-radius: 5px">⏰ Mon-Fri: 8AM-6PM</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav style="position: sticky; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95); padding: 1rem 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); z-index: 1000; backdrop-filter: blur(10px)">
+      <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem">
+        <div style="font-size: 1.8rem; font-weight: 700; color: #2c3e50; display: flex; align-items: center; gap: 0.5rem"><span style="color: #3498db">GPM</span> Clean</div>
+        <div style="display: flex; gap: 2rem; align-items: center">
+          <a href="index.html" style="text-decoration: none; color: #2c3e50; font-weight: 600; position: relative; padding: 0.5rem 0">
+            Home
+            <span style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: #3498db; transform: scaleX(1)"></span>
+          </a>
+          <a href="about.html" style="text-decoration: none; color: #2c3e50; position: relative; padding: 0.5rem 0">
+            About Us
+            <span style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: #3498db; transform: scaleX(0); transition: transform 0.3s"></span>
+          </a>
+          <a href="contact.html" style="text-decoration: none; color: #2c3e50; position: relative; padding: 0.5rem 0">
+            Contact
+            <span style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: #3498db; transform: scaleX(0); transition: transform 0.3s"></span>
+          </a>
+          <a
+            href="contact.html"
+            style="
+              text-decoration: none;
+              background: linear-gradient(45deg, #3498db, #2980b9);
+              color: white;
+              padding: 0.8rem 1.5rem;
+              border-radius: 5px;
+              font-weight: 600;
+              transition: all 0.3s;
+              box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+            "
+            class="hover-scale"
+            >Get a Quote</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      style="
+        height: 90vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/4108717/pexels-photo-4108717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+      ">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.7) 100%)"></div>
+      <div style="max-width: 1000px; margin: 0 auto; padding: 2rem; position: relative; z-index: 1" class="animate-fade-in">
+        <h1 style="font-size: 4rem; margin-bottom: 1.5rem; font-family: 'Open Sans', sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); line-height: 1.2">
+          Transform Your Space with Professional Cleaning
+        </h1>
+        <p style="font-size: 1.5rem; margin-bottom: 2.5rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); max-width: 800px; margin-left: auto; margin-right: auto">
+          Experience the difference with our expert cleaning solutions tailored to your needs
+        </p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center">
+          <a
+            href="contact.html"
+            style="
+              display: inline-block;
+              background: linear-gradient(45deg, #3498db, #2980b9);
+              color: white;
+              padding: 1.2rem 2.5rem;
+              border-radius: 5px;
+              text-decoration: none;
+              font-weight: 600;
+              transition: all 0.3s;
+              box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            "
+            class="hover-scale"
+            >Get a Free Quote</a
+          >
+          <a
+            href="#services"
+            style="display: inline-block; background: white; color: #2c3e50; padding: 1.2rem 2.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s"
+            class="hover-scale"
+            >Our Services</a
+          >
+        </div>
+      </div>
+      <div style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%)" class="animate-float">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section
+      style="
+        background: white;
+        padding: 3rem 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-top: -50px;
+        position: relative;
+        z-index: 2;
+        border-radius: 10px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      ">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem">
+        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; transition: all 0.3s" class="hover-scale">
+          <div style="font-size: 2.5rem; color: #3498db; margin-bottom: 1rem">✓</div>
+          <h3 style="color: #2c3e50; margin-bottom: 0.5rem; font-size: 1.2rem">Fully Insured</h3>
+          <p style="color: #666; font-size: 0.9rem">Comprehensive coverage for your peace of mind</p>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; transition: all 0.3s" class="hover-scale">
+          <div style="font-size: 2.5rem; color: #3498db; margin-bottom: 1rem">✓</div>
+          <h3 style="color: #2c3e50; margin-bottom: 0.5rem; font-size: 1.2rem">Police Checked</h3>
+          <p style="color: #666; font-size: 0.9rem">Verified background checks for all staff</p>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; transition: all 0.3s" class="hover-scale">
+          <div style="font-size: 2.5rem; color: #3498db; margin-bottom: 1rem">✓</div>
+          <h3 style="color: #2c3e50; margin-bottom: 0.5rem; font-size: 1.2rem">NDIS Approved</h3>
+          <p style="color: #666; font-size: 0.9rem">Specialized services for NDIS participants</p>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; transition: all 0.3s" class="hover-scale">
+          <div style="font-size: 2.5rem; color: #3498db; margin-bottom: 1rem">✓</div>
+          <h3 style="color: #2c3e50; margin-bottom: 0.5rem; font-size: 1.2rem">Satisfaction Guaranteed</h3>
+          <p style="color: #666; font-size: 0.9rem">100% satisfaction or we'll clean again</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      style="
+        padding: 5rem 2rem;
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+          url('https://images.pexels.com/photos/4108717/pexels-photo-4108717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-size: cover;
+        background-attachment: fixed;
+      ">
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div style="text-align: center; margin-bottom: 4rem">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #2c3e50" class="gradient-text">Our Services</h2>
+          <p style="color: #666; max-width: 600px; margin: 0 auto; font-size: 1.1rem">Comprehensive cleaning solutions for your home and business</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem">
+          <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center" class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem; color: #3498db">🏠</div>
+            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.5rem">Domestic Cleaning</h3>
+            <p style="color: #666; margin-bottom: 1.5rem">Professional home cleaning services tailored to your needs.</p>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 1.5rem">
+              <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✨ Regular cleaning</li>
+              <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✨ Deep cleaning</li>
+              <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✨ End of lease cleaning</li>
+            </ul>
+            <a
+              href="contact.html"
+              style="
+                display: inline-block;
+                background: linear-gradient(45deg, #3498db, #2980b9);
+                color: white;
+                padding: 0.8rem 1.5rem;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s;
+              "
+              class="hover-scale"
+              >Learn More</a
+            >
+          </div>
+          <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center" class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem; color: #3498db">🏢</div>
+            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.5rem">Commercial Cleaning</h3>
+            <p style="color: #666; margin-bottom: 1.5rem">Comprehensive cleaning solutions for your business.</p>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 1.5rem">
+              <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✨ Office cleaning</li>
+              <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✨ Retail cleaning</li>
+              <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✨ Industrial cleaning</li>
+            </ul>
+            <a
+              href="contact.html"
+              style="
+                display: inline-block;
+                background: linear-gradient(45deg, #3498db, #2980b9);
+                color: white;
+                padding: 0.8rem 1.5rem;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s;
+              "
+              class="hover-scale"
+              >Learn More</a
+            >
+          </div>
+          <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center" class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem; color: #3498db">🤝</div>
+            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.5rem">NDIS Cleaning</h3>
+            <p style="color: #666; margin-bottom: 1.5rem">Specialized cleaning services for NDIS participants.</p>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 1.5rem">
+              <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✨ NDIS approved</li>
+              <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✨ Flexible scheduling</li>
+              <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✨ Personalized service</li>
+            </ul>
+            <a
+              href="contact.html"
+              style="
+                display: inline-block;
+                background: linear-gradient(45deg, #3498db, #2980b9);
+                color: white;
+                padding: 0.8rem 1.5rem;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s;
+              "
+              class="hover-scale"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Badges Section -->
+    <section style="padding: 4rem 2rem; background: linear-gradient(45deg, #3498db, #2980b9); color: white">
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center">
+          <div class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem">⭐</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem">500+ Happy Clients</h3>
+            <p style="opacity: 0.9">Satisfied customers across Melbourne</p>
+          </div>
+          <div class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem">✨</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem">1000+ Projects</h3>
+            <p style="opacity: 0.9">Successfully completed cleaning jobs</p>
+          </div>
+          <div class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem">🏆</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem">5+ Years Experience</h3>
+            <p style="opacity: 0.9">Professional cleaning expertise</p>
+          </div>
+          <div class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem">💯</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem">100% Satisfaction</h3>
+            <p style="opacity: 0.9">Guaranteed quality service</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section
+      style="
+        padding: 5rem 2rem;
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+          url('https://images.pexels.com/photos/4108717/pexels-photo-4108717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-size: cover;
+        background-attachment: fixed;
+      ">
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div style="text-align: center; margin-bottom: 4rem">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #2c3e50" class="gradient-text">Why Choose Us</h2>
+          <p style="color: #666; max-width: 600px; margin: 0 auto; font-size: 1.1rem">Experience the difference with our professional cleaning services</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem">
+          <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center" class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem; color: #3498db">👨‍💼</div>
+            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.5rem">Professional Team</h3>
+            <p style="color: #666">Trained and experienced cleaning professionals</p>
+          </div>
+          <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center" class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem; color: #3498db">🕒</div>
+            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.5rem">Flexible Scheduling</h3>
+            <p style="color: #666">Available when you need us</p>
+          </div>
+          <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center" class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem; color: #3498db">🌿</div>
+            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.5rem">Eco-Friendly</h3>
+            <p style="color: #666">Environmentally conscious cleaning products</p>
+          </div>
+          <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center" class="hover-scale">
+            <div style="font-size: 3rem; margin-bottom: 1rem; color: #3498db">💰</div>
+            <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.5rem">Competitive Pricing</h3>
+            <p style="color: #666">Quality service at affordable rates</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section
+      style="
+        padding: 5rem 2rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/4108717/pexels-photo-4108717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+      ">
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div style="text-align: center; margin-bottom: 4rem">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem" class="gradient-text">What Our Clients Say</h2>
+          <p style="opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1rem">Don't just take our word for it - hear from our satisfied customers</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem">
+          <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px)" class="hover-scale">
+            <div style="font-size: 1.5rem; color: #ffd700; margin-bottom: 1rem">⭐⭐⭐⭐⭐</div>
+            <p style="margin-bottom: 1.5rem; font-style: italic">"GPM Clean has transformed our home! Their attention to detail and professionalism is outstanding."</p>
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <div style="width: 50px; height: 50px; background: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem">👤</div>
+              <div>
+                <h4 style="margin: 0; color: white">Sarah Johnson</h4>
+                <p style="margin: 0; opacity: 0.8">Residential Client</p>
+              </div>
+            </div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px)" class="hover-scale">
+            <div style="font-size: 1.5rem; color: #ffd700; margin-bottom: 1rem">⭐⭐⭐⭐⭐</div>
+            <p style="margin-bottom: 1.5rem; font-style: italic">"The team at GPM Clean has been maintaining our office space for over a year now. Always reliable and thorough!"</p>
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <div style="width: 50px; height: 50px; background: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem">👤</div>
+              <div>
+                <h4 style="margin: 0; color: white">Michael Chen</h4>
+                <p style="margin: 0; opacity: 0.8">Business Owner</p>
+              </div>
+            </div>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px)" class="hover-scale">
+            <div style="font-size: 1.5rem; color: #ffd700; margin-bottom: 1rem">⭐⭐⭐⭐⭐</div>
+            <p style="margin-bottom: 1.5rem; font-style: italic">"As an NDIS participant, I appreciate their understanding and flexibility. The service is exceptional!"</p>
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <div style="width: 50px; height: 50px; background: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem">👤</div>
+              <div>
+                <h4 style="margin: 0; color: white">Emma Thompson</h4>
+                <p style="margin: 0; opacity: 0.8">NDIS Client</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      style="
+        padding: 5rem 2rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/4108717/pexels-photo-4108717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        position: relative;
+      ">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.8) 100%)"></div>
+      <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 1">
+        <h2 style="font-size: 3rem; margin-bottom: 1.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)">Ready to Experience the GPM Clean Difference?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)">Get in touch today for a free quote and let us transform your space.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center">
+          <a
+            href="contact.html"
+            style="
+              display: inline-block;
+              background: linear-gradient(45deg, #3498db, #2980b9);
+              color: white;
+              padding: 1.2rem 2.5rem;
+              border-radius: 5px;
+              text-decoration: none;
+              font-weight: 600;
+              transition: all 0.3s;
+              box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            "
+            class="hover-scale"
+            >Get Your Free Quote</a
+          >
+          <a
+            href="tel:03XXXX"
+            style="display: inline-block; background: white; color: #2c3e50; padding: 1.2rem 2.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s"
+            class="hover-scale"
+            >Call Us Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(45deg, #2c3e50, #34495e); color: white; padding: 4rem 2rem">
+      <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem">
+        <div>
+          <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem">GPM Clean</h3>
+          <p style="opacity: 0.8; line-height: 1.8">Professional cleaning services in Melbourne, delivering excellence since 2015.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem">
+            <a href="#" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s; background: rgba(255, 255, 255, 0.1); padding: 0.5rem; border-radius: 5px">Facebook</a>
+            <a href="#" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s; background: rgba(255, 255, 255, 0.1); padding: 0.5rem; border-radius: 5px">Instagram</a>
+            <a href="#" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s; background: rgba(255, 255, 255, 0.1); padding: 0.5rem; border-radius: 5px">LinkedIn</a>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem">Quick Links</h3>
+          <ul style="list-style: none; padding: 0">
+            <li style="margin-bottom: 1rem"><a href="index.html" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s">Home</a></li>
+            <li style="margin-bottom: 1rem"><a href="about.html" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s">About Us</a></li>
+            <li style="margin-bottom: 1rem"><a href="contact.html" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem">Contact Us</h3>
+          <p style="opacity: 0.8; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">📞 (03) XXXX XXXX</p>
+          <p style="opacity: 0.8; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem">✉️ info@gpmclean.com.au</p>
+          <p style="opacity: 0.8; display: flex; align-items: center; gap: 0.5rem">📍 Melbourne, VIC</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1)">
+        <p style="opacity: 0.8">&copy; 2024 GPM Clean. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
